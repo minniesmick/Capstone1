@@ -1190,7 +1190,7 @@ const doc = new Document({
           new Paragraph({
             children: [
               new TextRun({ text: "Social Media Sentiment Analysis  \u2014  Machine Learning Final Project", font: "Arial", size: 18, color: "888888" }),
-              new TextRun({ children: [new PageNumber()], font: "Arial", size: 18, color: "888888" })
+              new TextRun({ children: ["- Sayfa -"], font: "Arial", size: 18, color: "888888" })
             ],
             tabStops: [{ type: TabStopType.RIGHT, position: TabStopPosition.MAX }],
             border: { bottom: { style: BorderStyle.SINGLE, size: 4, color: "CCCCCC", space: 4 } }

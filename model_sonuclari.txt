@@ -1,0 +1,76 @@
+======================================================================
+  MODEL SONUÇLARI — SOCIAL MEDIA SENTIMENT ANALİZİ
+======================================================================
+
+Model                      Accuracy        F1  Precision   Recall   ROC-AUC
+----------------------------------------------------------------------
+Linear SVM ★                 0.8665    0.8656     0.8680   0.8665    0.9268
+Multinomial NB               0.8588    0.8580     0.8601   0.8588    0.9232
+Logistic Regression          0.8534    0.8509     0.8625   0.8534    0.9292
+Gradient Boosting            0.8255    0.8195     0.8486   0.8255    0.8805
+XGBoost                      0.8219    0.8162     0.8425   0.8219    0.8810
+Random Forest                0.7437    0.7183     0.8180   0.7437    0.8963
+
+======================================================================
+DETAYLI RAPORLAR
+======================================================================
+
+--- Linear SVM ---
+              precision    recall  f1-score   support
+
+     Negatif       0.89      0.81      0.84      1001
+     Pozitif       0.85      0.92      0.88      1223
+
+    accuracy                           0.87      2224
+   macro avg       0.87      0.86      0.86      2224
+weighted avg       0.87      0.87      0.87      2224
+
+--- Multinomial NB ---
+              precision    recall  f1-score   support
+
+     Negatif       0.88      0.80      0.84      1001
+     Pozitif       0.85      0.91      0.88      1223
+
+    accuracy                           0.86      2224
+   macro avg       0.86      0.85      0.86      2224
+weighted avg       0.86      0.86      0.86      2224
+
+--- Logistic Regression ---
+              precision    recall  f1-score   support
+
+     Negatif       0.92      0.74      0.82      1001
+     Pozitif       0.82      0.95      0.88      1223
+
+    accuracy                           0.85      2224
+   macro avg       0.87      0.84      0.85      2224
+weighted avg       0.86      0.85      0.85      2224
+
+--- Gradient Boosting ---
+              precision    recall  f1-score   support
+
+     Negatif       0.94      0.65      0.77      1001
+     Pozitif       0.77      0.97      0.86      1223
+
+    accuracy                           0.83      2224
+   macro avg       0.86      0.81      0.82      2224
+weighted avg       0.85      0.83      0.82      2224
+
+--- XGBoost ---
+              precision    recall  f1-score   support
+
+     Negatif       0.93      0.66      0.77      1001
+     Pozitif       0.77      0.96      0.86      1223
+
+    accuracy                           0.82      2224
+   macro avg       0.85      0.81      0.81      2224
+weighted avg       0.84      0.82      0.82      2224
+
+--- Random Forest ---
+              precision    recall  f1-score   support
+
+     Negatif       0.98      0.44      0.61      1001
+     Pozitif       0.68      0.99      0.81      1223
+
+    accuracy                           0.74      2224
+   macro avg       0.83      0.72      0.71      2224
+weighted avg       0.82      0.74      0.72      2224

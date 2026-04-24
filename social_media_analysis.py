@@ -45,7 +45,8 @@ from sklearn.neighbors import KNeighborsClassifier
 import xgboost as xgb
 
 # ─── Output directory ────────────────────────────────────────────────────────
-OUTPUT_DIR = "/mnt/user-data/outputs/social_media_analysis"
+# Burayı senin yerel klasörüne uygun hale getiriyoruz
+OUTPUT_DIR = "outputs" 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # ─── Style ───────────────────────────────────────────────────────────────────
@@ -76,10 +77,7 @@ print("=" * 65)
 # ──────────────────────────────────────────────────────────────────────────────
 print("\n[1/7] Veri yükleniyor...")
 
-df = pd.read_csv(
-    "/mnt/user-data/uploads/social_media_comments__1_.csv",
-    encoding="cp1254"
-)
+df = pd.read_csv("social_media_comments.csv", encoding="iso-8859-9")
 df.columns = ["label", "text"]
 df = df.dropna(subset=["text"]).reset_index(drop=True)
 
@@ -419,14 +417,16 @@ MODELS = {
         n_jobs=-1, random_state=42
     ),
     "XGBoost": xgb.XGBClassifier(
-        n_estimators=200, max_depth=6, learning_rate=0.1,
-        subsample=0.8, colsample_bytree=0.8,
-        use_label_encoder=False, eval_metric="logloss",
-        random_state=42, n_jobs=-1, verbosity=0
-    ),
-    "Gradient Boosting": GradientBoostingClassifier(
-        n_estimators=150, max_depth=5, learning_rate=0.1,
-        random_state=42
+        tree_method='hist',     # GPU hızlandırmalı histogram metodunu kullanır
+        device='cuda',          # RTX 3060 Ti'ı (CUDA) aktif eder
+        n_estimators=200, 
+        max_depth=6, 
+        learning_rate=0.1,
+        subsample=0.8, 
+        colsample_bytree=0.8,
+        eval_metric="logloss",
+        random_state=42, 
+        verbosity=0
     ),
 }
 

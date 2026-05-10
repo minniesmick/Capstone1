@@ -245,7 +245,7 @@ SAMPLE_SIZE   = 200           # Test seti örnek boyutu (None = tümü)
 
 | Bileşen | Minimum | Önerilen |
 |---------|---------|---------|
-| GPU | GTX 1060 6GB | RTX 3060 Ti 8GB (sizin sisteminiz ✓) |
+| GPU | GTX 1060 6GB | RTX 3060 Ti 8GB ✓ |
 | RAM | 8 GB | 16 GB |
 | Disk | 5 GB (model) | 10 GB |
 | Python | 3.9+ | 3.11 ✓ |

@@ -1,0 +1,45 @@
+# --- Python & Ortam Dosyaları ---
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+ENV/
+
+# --- Proje Özel Dosyaları ---
+proje_yapisi.txt
+requirements.txt.bak
+
+# --- Veri Setleri ve CSV Çıktıları ---
+# (Veri setlerini depoda tutmak genellikle önerilmez)
+social_media_comments.csv
+*.csv
+*.json
+!new-config.yaml
+
+# --- Analiz ve Hibrit Model Sonuçları ---
+# Klasör yapındaki analiz çıktılarını (png, txt, csv) dışarıda tutar
+*_hybrid/
+results/
+H1_*.png
+H2_*.png
+H3_*.png
+H4_*.png
+H5_*.png
+hybrid_results.csv
+hybrid_summary.txt
+
+# --- IDE ve Editör Dosyaları ---
+.vscode/
+.idea/
+.continue/agents/  # Özel ajan konfigürasyonlarını gizli tutmak istersen
+*.swp
+*.tnt
+
+# --- Sistem ve Log Dosyaları ---
+*.log
+pip-log.txt
+site-packages/
+.DS_Store
+Thumbs.db

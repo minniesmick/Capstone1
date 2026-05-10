@@ -1,5 +1,5 @@
 # Hibrit Karar Ajani — Türkçe Sosyal Medya Duygu Analizi
-
+*Alper Yusuf Yaman*
 **SVM + Ollama LLM Tabanlı Hibrit Duygu Sınıflandırıcısı**
 
 ---
